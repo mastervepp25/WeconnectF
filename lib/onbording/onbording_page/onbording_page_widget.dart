@@ -277,7 +277,7 @@ class _OnbordingPageWidgetState extends State<OnbordingPageWidget>
                             EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 16.0),
                         child: FFButtonWidget(
                           onPressed: () async {
-                            context.pushNamed(Auth2CreateWidget.routeName);
+                            context.pushNamed(SignupPageWidget.routeName);
                           },
                           text: 'Get Started',
                           options: FFButtonOptions(
@@ -314,7 +314,7 @@ class _OnbordingPageWidgetState extends State<OnbordingPageWidget>
                             EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 16.0),
                         child: FFButtonWidget(
                           onPressed: () async {
-                            context.pushNamed(Auth2LoginWidget.routeName);
+                            context.pushNamed(SigninPageWidget.routeName);
                           },
                           text: 'My Account',
                           options: FFButtonOptions(

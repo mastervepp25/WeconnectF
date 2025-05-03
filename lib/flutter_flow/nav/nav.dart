@@ -230,36 +230,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => OnbordingPageWidget(),
             ),
             FFRoute(
-              name: Auth2CreateWidget.routeName,
-              path: Auth2CreateWidget.routePath,
-              builder: (context, params) => Auth2CreateWidget(),
-            ),
-            FFRoute(
-              name: Auth2LoginWidget.routeName,
-              path: Auth2LoginWidget.routePath,
-              builder: (context, params) => Auth2LoginWidget(),
-            ),
-            FFRoute(
-              name: Auth2ForgotPasswordWidget.routeName,
-              path: Auth2ForgotPasswordWidget.routePath,
-              builder: (context, params) => Auth2ForgotPasswordWidget(),
-            ),
-            FFRoute(
-              name: Auth2CreateProfileWidget.routeName,
-              path: Auth2CreateProfileWidget.routePath,
-              builder: (context, params) => Auth2CreateProfileWidget(),
-            ),
-            FFRoute(
-              name: Auth2ProfileWidget.routeName,
-              path: Auth2ProfileWidget.routePath,
-              builder: (context, params) => Auth2ProfileWidget(),
-            ),
-            FFRoute(
-              name: Auth2EditProfileWidget.routeName,
-              path: Auth2EditProfileWidget.routePath,
-              builder: (context, params) => Auth2EditProfileWidget(),
-            ),
-            FFRoute(
               name: SignupPageWidget.routeName,
               path: SignupPageWidget.routePath,
               builder: (context, params) => SignupPageWidget(),
