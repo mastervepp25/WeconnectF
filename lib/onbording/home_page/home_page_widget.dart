@@ -1415,12 +1415,12 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Icon(
-                        Icons.auto_awesome_outlined,
+                        Icons.build,
                         color: FlutterFlowTheme.of(context).primary,
                         size: 24.0,
                       ),
                       Icon(
-                        Icons.build,
+                        Icons.auto_awesome_outlined,
                         color: FlutterFlowTheme.of(context).primary,
                         size: 24.0,
                       ),

@@ -243,6 +243,41 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: HomePageWidget.routeName,
               path: HomePageWidget.routePath,
               builder: (context, params) => HomePageWidget(),
+            ),
+            FFRoute(
+              name: ProfileSettingsWidget.routeName,
+              path: ProfileSettingsWidget.routePath,
+              builder: (context, params) => ProfileSettingsWidget(),
+            ),
+            FFRoute(
+              name: SocialHubWidget.routeName,
+              path: SocialHubWidget.routePath,
+              builder: (context, params) => SocialHubWidget(),
+            ),
+            FFRoute(
+              name: CreatorToolsWidget.routeName,
+              path: CreatorToolsWidget.routePath,
+              builder: (context, params) => CreatorToolsWidget(),
+            ),
+            FFRoute(
+              name: HomeyWidget.routeName,
+              path: HomeyWidget.routePath,
+              builder: (context, params) => HomeyWidget(),
+            ),
+            FFRoute(
+              name: WePartnerWidget.routeName,
+              path: WePartnerWidget.routePath,
+              builder: (context, params) => WePartnerWidget(),
+            ),
+            FFRoute(
+              name: WeSocialWidget.routeName,
+              path: WeSocialWidget.routePath,
+              builder: (context, params) => WeSocialWidget(),
+            ),
+            FFRoute(
+              name: WeSocialhubWidget.routeName,
+              path: WeSocialhubWidget.routePath,
+              builder: (context, params) => WeSocialhubWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

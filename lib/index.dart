@@ -44,3 +44,11 @@ export '/onbording/onbording_page/onbording_page_widget.dart'
 export '/onbording/signup_page/signup_page_widget.dart' show SignupPageWidget;
 export '/onbording/signin_page/signin_page_widget.dart' show SigninPageWidget;
 export '/onbording/home_page/home_page_widget.dart' show HomePageWidget;
+export '/profile_settings/profile_settings_widget.dart'
+    show ProfileSettingsWidget;
+export '/social_hub/social_hub_widget.dart' show SocialHubWidget;
+export '/creator_tools/creator_tools_widget.dart' show CreatorToolsWidget;
+export '/homey/homey_widget.dart' show HomeyWidget;
+export '/we_partner/we_partner_widget.dart' show WePartnerWidget;
+export '/we_social/we_social_widget.dart' show WeSocialWidget;
+export '/we_socialhub/we_socialhub_widget.dart' show WeSocialhubWidget;
