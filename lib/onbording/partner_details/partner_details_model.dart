@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'we_partner_widget.dart' show WePartnerWidget;
+import 'partner_details_widget.dart' show PartnerDetailsWidget;
 import 'package:flutter/material.dart';
 
-class WePartnerModel extends FlutterFlowModel<WePartnerWidget> {
+class PartnerDetailsModel extends FlutterFlowModel<PartnerDetailsWidget> {
   @override
   void initState(BuildContext context) {}
 

@@ -61,12 +61,12 @@ class _SigninPageWidgetState extends State<SigninPageWidget> {
               color: FlutterFlowTheme.of(context).secondaryBackground,
             ),
             child: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(24.0, 24.0, 24.0, 24.0),
+              padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 24.0),
               child: SingleChildScrollView(
                 primary: false,
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Padding(

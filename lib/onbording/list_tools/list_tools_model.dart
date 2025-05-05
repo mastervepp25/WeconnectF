@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'we_social_widget.dart' show WeSocialWidget;
+import 'list_tools_widget.dart' show ListToolsWidget;
 import 'package:flutter/material.dart';
 
-class WeSocialModel extends FlutterFlowModel<WeSocialWidget> {
+class ListToolsModel extends FlutterFlowModel<ListToolsWidget> {
   @override
   void initState(BuildContext context) {}
 

@@ -94,10 +94,20 @@ class _ProfileSettingsWidgetState extends State<ProfileSettingsWidget> {
           title: Row(
             mainAxisSize: MainAxisSize.max,
             children: [
-              Icon(
-                Icons.workspaces,
-                color: FlutterFlowTheme.of(context).primary,
-                size: 24.0,
+              Container(
+                decoration: BoxDecoration(),
+                child: Container(
+                  width: 45.0,
+                  height: 45.0,
+                  clipBehavior: Clip.antiAlias,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                  ),
+                  child: Image.network(
+                    'https://picsum.photos/seed/973/600',
+                    fit: BoxFit.cover,
+                  ),
+                ),
               ),
               Text(
                 'WeConnect',
@@ -564,77 +574,6 @@ class _ProfileSettingsWidgetState extends State<ProfileSettingsWidget> {
                                       ),
                                     ),
                                   ],
-                                ),
-                              ),
-                            ),
-                          ].divide(SizedBox(height: 8.0)),
-                        ),
-                        Column(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  16.0, 0.0, 16.0, 0.0),
-                              child: Text(
-                                'ACTIVITY & FINANCE',
-                                style: FlutterFlowTheme.of(context)
-                                    .bodySmall
-                                    .override(
-                                      font: FlutterFlowTheme.of(context)
-                                          .bodySmall,
-                                      color: Color(0xFF9E9E9E),
-                                      fontSize: 12.0,
-                                      letterSpacing: 0.0,
-                                      fontWeight: FontWeight.w600,
-                                    ),
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.all(24.0),
-                              child: Container(
-                                width: double.infinity,
-                                decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  boxShadow: [
-                                    BoxShadow(
-                                      blurRadius: 4.0,
-                                      color: Color(0x15000000),
-                                      offset: Offset(
-                                        0.0,
-                                        2.0,
-                                      ),
-                                    )
-                                  ],
-                                  borderRadius: BorderRadius.circular(12.0),
-                                ),
-                                child: Align(
-                                  alignment: AlignmentDirectional(0.0, 0.0),
-                                  child: Padding(
-                                    padding: EdgeInsets.all(16.0),
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.max,
-                                      children: [
-                                        Icon(
-                                          Icons.assignment,
-                                          color: Color(0xFFEEEEEE),
-                                          size: 40.0,
-                                        ),
-                                        Text(
-                                          'Coming Soon',
-                                          textAlign: TextAlign.center,
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyMedium
-                                              .override(
-                                                font:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium,
-                                                color: Color(0xFF9E9E9E),
-                                                letterSpacing: 0.0,
-                                              ),
-                                        ),
-                                      ].divide(SizedBox(height: 8.0)),
-                                    ),
-                                  ),
                                 ),
                               ),
                             ),

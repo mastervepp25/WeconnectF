@@ -3579,85 +3579,75 @@ class _BottomPageWidgetState extends State<BottomPageWidget>
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     20.0, 0.0, 20.0, 16.0),
-                                child: InkWell(
-                                  splashColor: Colors.transparent,
-                                  focusColor: Colors.transparent,
-                                  hoverColor: Colors.transparent,
-                                  highlightColor: Colors.transparent,
-                                  onTap: () async {
-                                    context
-                                        .pushNamed(SettingPageWidget.routeName);
-                                  },
-                                  child: Container(
-                                    width: double.infinity,
-                                    decoration: BoxDecoration(
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondaryBackground,
-                                      boxShadow: [
-                                        BoxShadow(
-                                          blurRadius: 16.0,
-                                          color: FlutterFlowTheme.of(context)
-                                              .shadowColor,
-                                          offset: Offset(
-                                            0.0,
-                                            4.0,
+                                child: Container(
+                                  width: double.infinity,
+                                  decoration: BoxDecoration(
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryBackground,
+                                    boxShadow: [
+                                      BoxShadow(
+                                        blurRadius: 16.0,
+                                        color: FlutterFlowTheme.of(context)
+                                            .shadowColor,
+                                        offset: Offset(
+                                          0.0,
+                                          4.0,
+                                        ),
+                                      )
+                                    ],
+                                    borderRadius: BorderRadius.circular(12.0),
+                                  ),
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        16.0, 16.0, 16.0, 16.0),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        ClipRRect(
+                                          borderRadius:
+                                              BorderRadius.circular(0.0),
+                                          child: SvgPicture.asset(
+                                            'assets/images/pSetting.svg',
+                                            width: 24.0,
+                                            height: 24.0,
+                                            fit: BoxFit.contain,
+                                            alignment: Alignment(0.0, 0.0),
                                           ),
-                                        )
+                                        ),
+                                        Expanded(
+                                          child: Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    16.0, 0.0, 0.0, 0.0),
+                                            child: Text(
+                                              'Settings',
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'SF Pro Text',
+                                                        fontSize: 17.0,
+                                                        letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FontWeight.normal,
+                                                        lineHeight: 1.5,
+                                                      ),
+                                            ),
+                                          ),
+                                        ),
+                                        ClipRRect(
+                                          borderRadius:
+                                              BorderRadius.circular(0.0),
+                                          child: SvgPicture.asset(
+                                            'assets/images/arrow_right.svg',
+                                            width: 20.0,
+                                            height: 20.0,
+                                            fit: BoxFit.contain,
+                                            alignment: Alignment(0.0, 0.0),
+                                          ),
+                                        ),
                                       ],
-                                      borderRadius: BorderRadius.circular(12.0),
-                                    ),
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 16.0, 16.0, 16.0),
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        children: [
-                                          ClipRRect(
-                                            borderRadius:
-                                                BorderRadius.circular(0.0),
-                                            child: SvgPicture.asset(
-                                              'assets/images/pSetting.svg',
-                                              width: 24.0,
-                                              height: 24.0,
-                                              fit: BoxFit.contain,
-                                              alignment: Alignment(0.0, 0.0),
-                                            ),
-                                          ),
-                                          Expanded(
-                                            child: Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      16.0, 0.0, 0.0, 0.0),
-                                              child: Text(
-                                                'Settings',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'SF Pro Text',
-                                                          fontSize: 17.0,
-                                                          letterSpacing: 0.0,
-                                                          fontWeight:
-                                                              FontWeight.normal,
-                                                          lineHeight: 1.5,
-                                                        ),
-                                              ),
-                                            ),
-                                          ),
-                                          ClipRRect(
-                                            borderRadius:
-                                                BorderRadius.circular(0.0),
-                                            child: SvgPicture.asset(
-                                              'assets/images/arrow_right.svg',
-                                              width: 20.0,
-                                              height: 20.0,
-                                              fit: BoxFit.contain,
-                                              alignment: Alignment(0.0, 0.0),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
                                     ),
                                   ),
                                 ),

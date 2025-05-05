@@ -75,6 +75,26 @@ class UsersRecord extends FirestoreRecord {
   String get mbrId => _mbrId ?? '';
   bool hasMbrId() => _mbrId != null;
 
+  // "total_balance" field.
+  int? _totalBalance;
+  int get totalBalance => _totalBalance ?? 0;
+  bool hasTotalBalance() => _totalBalance != null;
+
+  // "social_income" field.
+  int? _socialIncome;
+  int get socialIncome => _socialIncome ?? 0;
+  bool hasSocialIncome() => _socialIncome != null;
+
+  // "wcx_token" field.
+  int? _wcxToken;
+  int get wcxToken => _wcxToken ?? 0;
+  bool hasWcxToken() => _wcxToken != null;
+
+  // "wcx_wallet_address" field.
+  String? _wcxWalletAddress;
+  String get wcxWalletAddress => _wcxWalletAddress ?? '';
+  bool hasWcxWalletAddress() => _wcxWalletAddress != null;
+
   void _initializeFields() {
     _email = snapshotData['email'] as String?;
     _displayName = snapshotData['display_name'] as String?;
@@ -88,6 +108,10 @@ class UsersRecord extends FirestoreRecord {
     _title = snapshotData['title'] as String?;
     _sponsor = snapshotData['sponsor'] as String?;
     _mbrId = snapshotData['mbr_id'] as String?;
+    _totalBalance = castToType<int>(snapshotData['total_balance']);
+    _socialIncome = castToType<int>(snapshotData['social_income']);
+    _wcxToken = castToType<int>(snapshotData['wcx_token']);
+    _wcxWalletAddress = snapshotData['wcx_wallet_address'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -136,6 +160,10 @@ Map<String, dynamic> createUsersRecordData({
   String? title,
   String? sponsor,
   String? mbrId,
+  int? totalBalance,
+  int? socialIncome,
+  int? wcxToken,
+  String? wcxWalletAddress,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -151,6 +179,10 @@ Map<String, dynamic> createUsersRecordData({
       'title': title,
       'sponsor': sponsor,
       'mbr_id': mbrId,
+      'total_balance': totalBalance,
+      'social_income': socialIncome,
+      'wcx_token': wcxToken,
+      'wcx_wallet_address': wcxWalletAddress,
     }.withoutNulls,
   );
 
@@ -173,7 +205,11 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e1?.role == e2?.role &&
         e1?.title == e2?.title &&
         e1?.sponsor == e2?.sponsor &&
-        e1?.mbrId == e2?.mbrId;
+        e1?.mbrId == e2?.mbrId &&
+        e1?.totalBalance == e2?.totalBalance &&
+        e1?.socialIncome == e2?.socialIncome &&
+        e1?.wcxToken == e2?.wcxToken &&
+        e1?.wcxWalletAddress == e2?.wcxWalletAddress;
   }
 
   @override
@@ -189,7 +225,11 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e?.role,
         e?.title,
         e?.sponsor,
-        e?.mbrId
+        e?.mbrId,
+        e?.totalBalance,
+        e?.socialIncome,
+        e?.wcxToken,
+        e?.wcxWalletAddress
       ]);
 
   @override

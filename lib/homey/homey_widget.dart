@@ -534,47 +534,11 @@ class _HomeyWidgetState extends State<HomeyWidget> {
                               ),
                             ),
                           ),
-                          Container(
-                            width: 60.0,
-                            height: 60.0,
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context).accent4,
-                              borderRadius: BorderRadius.circular(12.0),
-                            ),
-                            child: Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
-                              child: Icon(
-                                Icons.people,
-                                color: FlutterFlowTheme.of(context).alternate,
-                                size: 28.0,
-                              ),
-                            ),
-                          ),
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 4.0, 0.0, 0.0),
                             child: Text(
                               'Analytics',
-                              textAlign: TextAlign.center,
-                              style: FlutterFlowTheme.of(context)
-                                  .bodySmall
-                                  .override(
-                                    font:
-                                        FlutterFlowTheme.of(context).bodySmall,
-                                    letterSpacing: 0.0,
-                                  ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Column(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 4.0, 0.0, 0.0),
-                            child: Text(
-                              'Community',
                               textAlign: TextAlign.center,
                               style: FlutterFlowTheme.of(context)
                                   .bodySmall
@@ -666,14 +630,15 @@ class _HomeyWidgetState extends State<HomeyWidget> {
                             width: 60.0,
                             height: 60.0,
                             decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context).accent4,
+                              color: FlutterFlowTheme.of(context).secondaryText,
                               borderRadius: BorderRadius.circular(12.0),
                             ),
                             child: Align(
                               alignment: AlignmentDirectional(0.0, 0.0),
                               child: Icon(
                                 Icons.groups,
-                                color: FlutterFlowTheme.of(context).alternate,
+                                color: FlutterFlowTheme.of(context)
+                                    .primaryBackground,
                                 size: 28.0,
                               ),
                             ),
@@ -702,42 +667,6 @@ class _HomeyWidgetState extends State<HomeyWidget> {
                             width: 60.0,
                             height: 60.0,
                             decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context).accent1,
-                              borderRadius: BorderRadius.circular(12.0),
-                            ),
-                            child: Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
-                              child: Icon(
-                                Icons.auto_awesome,
-                                color: FlutterFlowTheme.of(context).primary,
-                                size: 28.0,
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 4.0, 0.0, 0.0),
-                            child: Text(
-                              'Automation',
-                              textAlign: TextAlign.center,
-                              style: FlutterFlowTheme.of(context)
-                                  .bodySmall
-                                  .override(
-                                    font:
-                                        FlutterFlowTheme.of(context).bodySmall,
-                                    letterSpacing: 0.0,
-                                  ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Column(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Container(
-                            width: 60.0,
-                            height: 60.0,
-                            decoration: BoxDecoration(
                               color: FlutterFlowTheme.of(context).accent3,
                               borderRadius: BorderRadius.circular(12.0),
                             ),
@@ -745,7 +674,7 @@ class _HomeyWidgetState extends State<HomeyWidget> {
                               alignment: AlignmentDirectional(0.0, 0.0),
                               child: Icon(
                                 Icons.account_balance_wallet,
-                                color: FlutterFlowTheme.of(context).tertiary,
+                                color: FlutterFlowTheme.of(context).primary,
                                 size: 28.0,
                               ),
                             ),

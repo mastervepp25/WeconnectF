@@ -7,6 +7,7 @@ import '/backend/schema/structs/index.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
+import '/main.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 
@@ -78,14 +79,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       refreshListenable: appStateNotifier,
       navigatorKey: appNavigatorKey,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? HomePageWidget() : OnbordingPageWidget(),
+          appStateNotifier.loggedIn ? NavBarPage() : OnbordingPageWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => appStateNotifier.loggedIn
-              ? HomePageWidget()
-              : OnbordingPageWidget(),
+          builder: (context, _) =>
+              appStateNotifier.loggedIn ? NavBarPage() : OnbordingPageWidget(),
           routes: [
             FFRoute(
               name: ProfilePageWidget.routeName,
@@ -101,11 +101,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: EditProfilePageWidget.routeName,
               path: EditProfilePageWidget.routePath,
               builder: (context, params) => EditProfilePageWidget(),
-            ),
-            FFRoute(
-              name: SettingPageWidget.routeName,
-              path: SettingPageWidget.routePath,
-              builder: (context, params) => SettingPageWidget(),
             ),
             FFRoute(
               name: PrivacyPolicyPageWidget.routeName,
@@ -242,17 +237,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             FFRoute(
               name: HomePageWidget.routeName,
               path: HomePageWidget.routePath,
-              builder: (context, params) => HomePageWidget(),
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'HomePage')
+                  : HomePageWidget(),
             ),
             FFRoute(
               name: ProfileSettingsWidget.routeName,
               path: ProfileSettingsWidget.routePath,
-              builder: (context, params) => ProfileSettingsWidget(),
-            ),
-            FFRoute(
-              name: SocialHubWidget.routeName,
-              path: SocialHubWidget.routePath,
-              builder: (context, params) => SocialHubWidget(),
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'ProfileSettings')
+                  : ProfileSettingsWidget(),
             ),
             FFRoute(
               name: CreatorToolsWidget.routeName,
@@ -265,23 +259,47 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => HomeyWidget(),
             ),
             FFRoute(
-              name: WePartnerWidget.routeName,
-              path: WePartnerWidget.routePath,
-              builder: (context, params) => WePartnerWidget(),
-            ),
-            FFRoute(
-              name: WeSocialWidget.routeName,
-              path: WeSocialWidget.routePath,
-              builder: (context, params) => WeSocialWidget(),
-            ),
-            FFRoute(
               name: WeSocialhubWidget.routeName,
               path: WeSocialhubWidget.routePath,
-              builder: (context, params) => WeSocialhubWidget(),
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'WeSocialhub')
+                  : WeSocialhubWidget(),
+            ),
+            FFRoute(
+              name: AcademyPageWidget.routeName,
+              path: AcademyPageWidget.routePath,
+              builder: (context, params) => AcademyPageWidget(),
+            ),
+            FFRoute(
+              name: ListToolsWidget.routeName,
+              path: ListToolsWidget.routePath,
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'ListTools')
+                  : ListToolsWidget(),
+            ),
+            FFRoute(
+              name: WeBusinessWidget.routeName,
+              path: WeBusinessWidget.routePath,
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'WeBusiness')
+                  : WeBusinessWidget(),
+            ),
+            FFRoute(
+              name: PartnerDetailsWidget.routeName,
+              path: PartnerDetailsWidget.routePath,
+              builder: (context, params) => PartnerDetailsWidget(
+                tooldetails: params.getParam(
+                  'tooldetails',
+                  ParamType.DocumentReference,
+                  isList: false,
+                  collectionNamePath: ['tools'],
+                ),
+              ),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
+      observers: [routeObserver],
     );
 
 extension NavParamExtensions on Map<String, String?> {

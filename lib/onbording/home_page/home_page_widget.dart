@@ -170,36 +170,6 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               color: FlutterFlowTheme.of(context).primaryText,
                               size: 24.0,
                             ),
-                            Align(
-                              alignment: AlignmentDirectional(1.0, -1.0),
-                              child: Container(
-                                width: 16.0,
-                                height: 16.0,
-                                decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context).error,
-                                  shape: BoxShape.circle,
-                                ),
-                                child: Align(
-                                  alignment: AlignmentDirectional(0.0, 0.0),
-                                  child: Padding(
-                                    padding: EdgeInsets.all(8.0),
-                                    child: Text(
-                                      '2',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodySmall
-                                          .override(
-                                            font: FlutterFlowTheme.of(context)
-                                                .bodySmall,
-                                            color: Colors.white,
-                                            fontSize: 10.0,
-                                            letterSpacing: 0.0,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
                           ],
                         ),
                         Stack(
@@ -208,36 +178,6 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               Icons.mail_outline,
                               color: FlutterFlowTheme.of(context).primaryText,
                               size: 24.0,
-                            ),
-                            Align(
-                              alignment: AlignmentDirectional(1.0, -1.0),
-                              child: Container(
-                                width: 16.0,
-                                height: 16.0,
-                                decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context).error,
-                                  shape: BoxShape.circle,
-                                ),
-                                child: Align(
-                                  alignment: AlignmentDirectional(0.0, 0.0),
-                                  child: Padding(
-                                    padding: EdgeInsets.all(8.0),
-                                    child: Text(
-                                      '1',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodySmall
-                                          .override(
-                                            font: FlutterFlowTheme.of(context)
-                                                .bodySmall,
-                                            color: Colors.white,
-                                            fontSize: 10.0,
-                                            letterSpacing: 0.0,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                    ),
-                                  ),
-                                ),
-                              ),
                             ),
                           ],
                         ),
@@ -449,20 +389,27 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                   letterSpacing: 0.0,
                                                 ),
                                           ),
-                                          Text(
-                                            '₱1,000.00',
-                                            style: FlutterFlowTheme.of(context)
-                                                .titleMedium
-                                                .override(
-                                                  font: FlutterFlowTheme.of(
-                                                          context)
-                                                      .titleMedium,
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primaryText,
-                                                  letterSpacing: 0.0,
-                                                  fontWeight: FontWeight.w600,
-                                                ),
+                                          AuthUserStreamWidget(
+                                            builder: (context) => Text(
+                                              valueOrDefault(
+                                                      currentUserDocument
+                                                          ?.totalBalance,
+                                                      0)
+                                                  .toString(),
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .titleMedium
+                                                  .override(
+                                                    font: FlutterFlowTheme.of(
+                                                            context)
+                                                        .titleMedium,
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .primaryText,
+                                                    letterSpacing: 0.0,
+                                                    fontWeight: FontWeight.w600,
+                                                  ),
+                                            ),
                                           ),
                                         ],
                                       ),
@@ -1398,81 +1345,6 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         ),
                       ].divide(SizedBox(height: 24.0)),
                     ),
-                  ),
-                ),
-              ),
-              Container(
-                width: double.infinity,
-                height: 72.5,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(0.0),
-                ),
-                child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Icon(
-                        Icons.build,
-                        color: FlutterFlowTheme.of(context).primary,
-                        size: 24.0,
-                      ),
-                      Icon(
-                        Icons.auto_awesome_outlined,
-                        color: FlutterFlowTheme.of(context).primary,
-                        size: 24.0,
-                      ),
-                      Material(
-                        color: Colors.transparent,
-                        elevation: 6.0,
-                        shape: const CircleBorder(),
-                        child: ClipOval(
-                          child: Container(
-                            width: 55.0,
-                            height: 55.0,
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context)
-                                  .primaryBackground,
-                              boxShadow: [
-                                BoxShadow(
-                                  blurRadius: 4.0,
-                                  color: Color(0x33000000),
-                                  offset: Offset(
-                                    0.0,
-                                    2.0,
-                                  ),
-                                )
-                              ],
-                              shape: BoxShape.circle,
-                            ),
-                            child: Container(
-                              width: 35.0,
-                              height: 35.0,
-                              clipBehavior: Clip.antiAlias,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                              ),
-                              child: Image.asset(
-                                'assets/images/logo.png',
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Icon(
-                        Icons.apartment_outlined,
-                        color: FlutterFlowTheme.of(context).primary,
-                        size: 24.0,
-                      ),
-                      Icon(
-                        Icons.settings_sharp,
-                        color: FlutterFlowTheme.of(context).primary,
-                        size: 24.0,
-                      ),
-                    ],
                   ),
                 ),
               ),
