@@ -1,8 +1,9 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'creator_tools_widget.dart' show CreatorToolsWidget;
+import '/index.dart';
+import 'page_tools_widget.dart' show PageToolsWidget;
 import 'package:flutter/material.dart';
 
-class CreatorToolsModel extends FlutterFlowModel<CreatorToolsWidget> {
+class PageToolsModel extends FlutterFlowModel<PageToolsWidget> {
   @override
   void initState(BuildContext context) {}
 

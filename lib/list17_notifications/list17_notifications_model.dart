@@ -1,8 +1,9 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'list_tools_widget.dart' show ListToolsWidget;
+import 'list17_notifications_widget.dart' show List17NotificationsWidget;
 import 'package:flutter/material.dart';
 
-class ListToolsModel extends FlutterFlowModel<ListToolsWidget> {
+class List17NotificationsModel
+    extends FlutterFlowModel<List17NotificationsWidget> {
   @override
   void initState(BuildContext context) {}
 

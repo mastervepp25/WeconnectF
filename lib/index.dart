@@ -35,22 +35,25 @@ export '/aboutus_page/aboutus_page_widget.dart' show AboutusPageWidget;
 export '/security_page/security_page_widget.dart' show SecurityPageWidget;
 export '/change_password_page/change_password_page_widget.dart'
     show ChangePasswordPageWidget;
-export '/onbording/onbording_page/onbording_page_widget.dart'
+export '/main_pages/onbording_page/onbording_page_widget.dart'
     show OnbordingPageWidget;
-export '/onbording/signup_page/signup_page_widget.dart' show SignupPageWidget;
-export '/onbording/signin_page/signin_page_widget.dart' show SigninPageWidget;
-export '/onbording/home_page/home_page_widget.dart' show HomePageWidget;
-export '/onbording/profile_settings/profile_settings_widget.dart'
-    show ProfileSettingsWidget;
-export '/onbording/creator_tools/creator_tools_widget.dart'
-    show CreatorToolsWidget;
+export '/main_pages/signup_page/signup_page_widget.dart' show SignupPageWidget;
+export '/main_pages/signin_page/signin_page_widget.dart' show SigninPageWidget;
 export '/homey/homey_widget.dart' show HomeyWidget;
-export '/onbording/we_socialhub/we_socialhub_widget.dart'
-    show WeSocialhubWidget;
+export '/we_socialhub/we_socialhub_widget.dart' show WeSocialhubWidget;
 export '/academy_page/academy_page_widget.dart' show AcademyPageWidget;
-export '/onbording/list_tools/list_tools_widget.dart' show ListToolsWidget;
-export '/onbording/we_business/we_business_widget.dart' show WeBusinessWidget;
-export '/onbording/partner_details/partner_details_widget.dart'
-    show PartnerDetailsWidget;
-export '/onbording/forgot_password/forgot_password_widget.dart'
+export '/we_business/we_business_widget.dart' show WeBusinessWidget;
+export '/partner_details/partner_details_widget.dart' show PartnerDetailsWidget;
+export '/main_pages/forgot_password/forgot_password_widget.dart'
     show ForgotPasswordWidget;
+export '/list11_messages/list11_messages_widget.dart' show List11MessagesWidget;
+export '/list17_notifications/list17_notifications_widget.dart'
+    show List17NotificationsWidget;
+export '/profile06/profile06_widget.dart' show Profile06Widget;
+export '/main_pages/page_settings/page_settings_widget.dart'
+    show PageSettingsWidget;
+export '/main_pages/page_social/page_social_widget.dart' show PageSocialWidget;
+export '/main_pages/page_home/page_home_widget.dart' show PageHomeWidget;
+export '/main_pages/page_partner/page_partner_widget.dart'
+    show PagePartnerWidget;
+export '/main_pages/page_tools/page_tools_widget.dart' show PageToolsWidget;

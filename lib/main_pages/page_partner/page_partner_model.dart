@@ -1,8 +1,9 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'profile_settings_widget.dart' show ProfileSettingsWidget;
+import '/index.dart';
+import 'page_partner_widget.dart' show PagePartnerWidget;
 import 'package:flutter/material.dart';
 
-class ProfileSettingsModel extends FlutterFlowModel<ProfileSettingsWidget> {
+class PagePartnerModel extends FlutterFlowModel<PagePartnerWidget> {
   @override
   void initState(BuildContext context) {}
 

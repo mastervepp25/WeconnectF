@@ -7,7 +7,6 @@ import '/backend/schema/structs/index.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
-import '/main.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 
@@ -79,13 +78,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       refreshListenable: appStateNotifier,
       navigatorKey: appNavigatorKey,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? NavBarPage() : OnbordingPageWidget(),
+          appStateNotifier.loggedIn ? PageHomeWidget() : OnbordingPageWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) =>
-              appStateNotifier.loggedIn ? NavBarPage() : OnbordingPageWidget(),
+          builder: (context, _) => appStateNotifier.loggedIn
+              ? PageHomeWidget()
+              : OnbordingPageWidget(),
           routes: [
             FFRoute(
               name: ProfilePageWidget.routeName,
@@ -235,25 +235,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => SigninPageWidget(),
             ),
             FFRoute(
-              name: HomePageWidget.routeName,
-              path: HomePageWidget.routePath,
-              builder: (context, params) => params.isEmpty
-                  ? NavBarPage(initialPage: 'HomePage')
-                  : HomePageWidget(),
-            ),
-            FFRoute(
-              name: ProfileSettingsWidget.routeName,
-              path: ProfileSettingsWidget.routePath,
-              builder: (context, params) => params.isEmpty
-                  ? NavBarPage(initialPage: 'ProfileSettings')
-                  : ProfileSettingsWidget(),
-            ),
-            FFRoute(
-              name: CreatorToolsWidget.routeName,
-              path: CreatorToolsWidget.routePath,
-              builder: (context, params) => CreatorToolsWidget(),
-            ),
-            FFRoute(
               name: HomeyWidget.routeName,
               path: HomeyWidget.routePath,
               builder: (context, params) => HomeyWidget(),
@@ -261,9 +242,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             FFRoute(
               name: WeSocialhubWidget.routeName,
               path: WeSocialhubWidget.routePath,
-              builder: (context, params) => params.isEmpty
-                  ? NavBarPage(initialPage: 'WeSocialhub')
-                  : WeSocialhubWidget(),
+              builder: (context, params) => WeSocialhubWidget(),
             ),
             FFRoute(
               name: AcademyPageWidget.routeName,
@@ -271,18 +250,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => AcademyPageWidget(),
             ),
             FFRoute(
-              name: ListToolsWidget.routeName,
-              path: ListToolsWidget.routePath,
-              builder: (context, params) => params.isEmpty
-                  ? NavBarPage(initialPage: 'ListTools')
-                  : ListToolsWidget(),
-            ),
-            FFRoute(
               name: WeBusinessWidget.routeName,
               path: WeBusinessWidget.routePath,
-              builder: (context, params) => params.isEmpty
-                  ? NavBarPage(initialPage: 'WeBusiness')
-                  : WeBusinessWidget(),
+              builder: (context, params) => WeBusinessWidget(),
             ),
             FFRoute(
               name: PartnerDetailsWidget.routeName,
@@ -300,6 +270,46 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: ForgotPasswordWidget.routeName,
               path: ForgotPasswordWidget.routePath,
               builder: (context, params) => ForgotPasswordWidget(),
+            ),
+            FFRoute(
+              name: List11MessagesWidget.routeName,
+              path: List11MessagesWidget.routePath,
+              builder: (context, params) => List11MessagesWidget(),
+            ),
+            FFRoute(
+              name: List17NotificationsWidget.routeName,
+              path: List17NotificationsWidget.routePath,
+              builder: (context, params) => List17NotificationsWidget(),
+            ),
+            FFRoute(
+              name: Profile06Widget.routeName,
+              path: Profile06Widget.routePath,
+              builder: (context, params) => Profile06Widget(),
+            ),
+            FFRoute(
+              name: PageSettingsWidget.routeName,
+              path: PageSettingsWidget.routePath,
+              builder: (context, params) => PageSettingsWidget(),
+            ),
+            FFRoute(
+              name: PageSocialWidget.routeName,
+              path: PageSocialWidget.routePath,
+              builder: (context, params) => PageSocialWidget(),
+            ),
+            FFRoute(
+              name: PageHomeWidget.routeName,
+              path: PageHomeWidget.routePath,
+              builder: (context, params) => PageHomeWidget(),
+            ),
+            FFRoute(
+              name: PagePartnerWidget.routeName,
+              path: PagePartnerWidget.routePath,
+              builder: (context, params) => PagePartnerWidget(),
+            ),
+            FFRoute(
+              name: PageToolsWidget.routeName,
+              path: PageToolsWidget.routePath,
+              builder: (context, params) => PageToolsWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

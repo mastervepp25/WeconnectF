@@ -543,7 +543,7 @@ class _SignupPageWidgetState extends State<SignupPageWidget> {
                                 ));
 
                             context.pushNamedAuth(
-                                HomePageWidget.routeName, context.mounted);
+                                PageHomeWidget.routeName, context.mounted);
                           },
                           text: 'Sign Up',
                           options: FFButtonOptions(
