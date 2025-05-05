@@ -443,41 +443,44 @@ class _HomeyWidgetState extends State<HomeyWidget> {
                     shrinkWrap: true,
                     scrollDirection: Axis.vertical,
                     children: [
-                      Column(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Container(
-                            width: 60.0,
-                            height: 60.0,
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context).accent1,
-                              borderRadius: BorderRadius.circular(12.0),
-                            ),
-                            child: Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
-                              child: Icon(
-                                Icons.school,
-                                color: FlutterFlowTheme.of(context).primary,
-                                size: 28.0,
+                      Container(
+                        decoration: BoxDecoration(),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Container(
+                              width: 60.0,
+                              height: 60.0,
+                              decoration: BoxDecoration(
+                                color: FlutterFlowTheme.of(context).accent1,
+                                borderRadius: BorderRadius.circular(12.0),
+                              ),
+                              child: Align(
+                                alignment: AlignmentDirectional(0.0, 0.0),
+                                child: Icon(
+                                  Icons.school,
+                                  color: FlutterFlowTheme.of(context).primary,
+                                  size: 28.0,
+                                ),
                               ),
                             ),
-                          ),
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 4.0, 0.0, 0.0),
-                            child: Text(
-                              'Guru',
-                              textAlign: TextAlign.center,
-                              style: FlutterFlowTheme.of(context)
-                                  .bodySmall
-                                  .override(
-                                    font:
-                                        FlutterFlowTheme.of(context).bodySmall,
-                                    letterSpacing: 0.0,
-                                  ),
+                            Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 4.0, 0.0, 0.0),
+                              child: Text(
+                                'Guru',
+                                textAlign: TextAlign.center,
+                                style: FlutterFlowTheme.of(context)
+                                    .bodySmall
+                                    .override(
+                                      font: FlutterFlowTheme.of(context)
+                                          .bodySmall,
+                                      letterSpacing: 0.0,
+                                    ),
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                       Column(
                         mainAxisSize: MainAxisSize.max,
@@ -486,14 +489,14 @@ class _HomeyWidgetState extends State<HomeyWidget> {
                             width: 60.0,
                             height: 60.0,
                             decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context).accent2,
+                              color: Color(0xFFA8C9EE),
                               borderRadius: BorderRadius.circular(12.0),
                             ),
                             child: Align(
                               alignment: AlignmentDirectional(0.0, 0.0),
                               child: Icon(
                                 Icons.video_library,
-                                color: FlutterFlowTheme.of(context).secondary,
+                                color: FlutterFlowTheme.of(context).primary,
                                 size: 28.0,
                               ),
                             ),
@@ -522,14 +525,14 @@ class _HomeyWidgetState extends State<HomeyWidget> {
                             width: 60.0,
                             height: 60.0,
                             decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context).accent3,
+                              color: Color(0xFFA8C9EE),
                               borderRadius: BorderRadius.circular(12.0),
                             ),
                             child: Align(
                               alignment: AlignmentDirectional(0.0, 0.0),
                               child: Icon(
                                 Icons.analytics,
-                                color: FlutterFlowTheme.of(context).tertiary,
+                                color: FlutterFlowTheme.of(context).primary,
                                 size: 28.0,
                               ),
                             ),
@@ -558,14 +561,14 @@ class _HomeyWidgetState extends State<HomeyWidget> {
                             width: 60.0,
                             height: 60.0,
                             decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context).accent2,
+                              color: Color(0xFFA8C9EE),
                               borderRadius: BorderRadius.circular(12.0),
                             ),
                             child: Align(
                               alignment: AlignmentDirectional(0.0, 0.0),
                               child: Icon(
                                 Icons.attach_money,
-                                color: FlutterFlowTheme.of(context).secondary,
+                                color: FlutterFlowTheme.of(context).primary,
                                 size: 28.0,
                               ),
                             ),

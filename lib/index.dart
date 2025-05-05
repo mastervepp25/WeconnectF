@@ -52,3 +52,5 @@ export '/onbording/list_tools/list_tools_widget.dart' show ListToolsWidget;
 export '/onbording/we_business/we_business_widget.dart' show WeBusinessWidget;
 export '/onbording/partner_details/partner_details_widget.dart'
     show PartnerDetailsWidget;
+export '/onbording/forgot_password/forgot_password_widget.dart'
+    show ForgotPasswordWidget;

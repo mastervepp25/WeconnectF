@@ -295,6 +295,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   collectionNamePath: ['tools'],
                 ),
               ),
+            ),
+            FFRoute(
+              name: ForgotPasswordWidget.routeName,
+              path: ForgotPasswordWidget.routePath,
+              builder: (context, params) => ForgotPasswordWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

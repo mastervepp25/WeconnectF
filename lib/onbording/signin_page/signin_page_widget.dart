@@ -262,23 +262,32 @@ class _SigninPageWidgetState extends State<SigninPageWidget> {
                         ),
                       ].divide(SizedBox(height: 16.0)),
                     ),
-                    Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'Forgot Password',
-                          style: FlutterFlowTheme.of(context)
-                              .bodySmall
-                              .override(
-                                font: FlutterFlowTheme.of(context).bodySmall,
-                                color:
-                                    FlutterFlowTheme.of(context).secondaryText,
-                                fontSize: 14.0,
-                                letterSpacing: 0.0,
-                              ),
-                        ),
-                      ].divide(SizedBox(width: 4.0)),
+                    InkWell(
+                      splashColor: Colors.transparent,
+                      focusColor: Colors.transparent,
+                      hoverColor: Colors.transparent,
+                      highlightColor: Colors.transparent,
+                      onTap: () async {
+                        context.pushNamed(ForgotPasswordWidget.routeName);
+                      },
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            'Forgot Password',
+                            style: FlutterFlowTheme.of(context)
+                                .bodySmall
+                                .override(
+                                  font: FlutterFlowTheme.of(context).bodySmall,
+                                  color: FlutterFlowTheme.of(context)
+                                      .secondaryText,
+                                  fontSize: 14.0,
+                                  letterSpacing: 0.0,
+                                ),
+                          ),
+                        ].divide(SizedBox(width: 4.0)),
+                      ),
                     ),
                     InkWell(
                       splashColor: Colors.transparent,
