@@ -1,3 +1,4 @@
+import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -93,6 +94,47 @@ class _PageHomeWidgetState extends State<PageHomeWidget> {
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        appBar: AppBar(
+          backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+          automaticallyImplyLeading: false,
+          title: Row(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                'WeConnect',
+                style: FlutterFlowTheme.of(context).headlineMedium.override(
+                      font: FlutterFlowTheme.of(context).headlineMedium,
+                      color: FlutterFlowTheme.of(context).secondaryText,
+                      fontSize: 22.0,
+                      letterSpacing: 0.0,
+                    ),
+              ),
+              InkWell(
+                splashColor: Colors.transparent,
+                focusColor: Colors.transparent,
+                hoverColor: Colors.transparent,
+                highlightColor: Colors.transparent,
+                onTap: () async {
+                  GoRouter.of(context).prepareAuthEvent();
+                  await authManager.signOut();
+                  GoRouter.of(context).clearRedirectLocation();
+
+                  context.pushNamedAuth(
+                      SigninPageWidget.routeName, context.mounted);
+                },
+                child: Icon(
+                  Icons.login_outlined,
+                  color: FlutterFlowTheme.of(context).primaryText,
+                  size: 24.0,
+                ),
+              ),
+            ],
+          ),
+          actions: [],
+          centerTitle: false,
+          elevation: 2.0,
+        ),
         body: Padding(
           padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
           child: Container(
@@ -605,7 +647,7 @@ class _PageHomeWidgetState extends State<PageHomeWidget> {
                                       height: 60.0,
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
-                                            .accent3,
+                                            .accent1,
                                         borderRadius:
                                             BorderRadius.circular(12.0),
                                       ),
@@ -615,7 +657,7 @@ class _PageHomeWidgetState extends State<PageHomeWidget> {
                                         child: Icon(
                                           Icons.group_add,
                                           color: FlutterFlowTheme.of(context)
-                                              .tertiary,
+                                              .primary,
                                           size: 28.0,
                                         ),
                                       ),
@@ -645,7 +687,7 @@ class _PageHomeWidgetState extends State<PageHomeWidget> {
                                       height: 60.0,
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
-                                            .secondaryText,
+                                            .accent1,
                                         borderRadius:
                                             BorderRadius.circular(12.0),
                                       ),
@@ -655,7 +697,7 @@ class _PageHomeWidgetState extends State<PageHomeWidget> {
                                         child: Icon(
                                           Icons.groups,
                                           color: FlutterFlowTheme.of(context)
-                                              .primaryBackground,
+                                              .primary,
                                           size: 28.0,
                                         ),
                                       ),
@@ -685,7 +727,7 @@ class _PageHomeWidgetState extends State<PageHomeWidget> {
                                       height: 60.0,
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
-                                            .accent3,
+                                            .accent1,
                                         borderRadius:
                                             BorderRadius.circular(12.0),
                                       ),
